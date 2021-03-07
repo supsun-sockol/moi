@@ -9,13 +9,27 @@ int main() {
     {
         return 1;
     }
-    const int start = 1;
-    int q;
+    int start;
+    int finish;
+    cin >> start;
+    cin >> finish;
+    long long q;
     string str;
     unordered_map <int, bool> v;
-    for (int j = start; j < 10000; j++)
+    for (int i = 0; i < start; i++)
     {
-        fin >> q;
+        fin.ignore(20, '\n');
+        cout << "\b\b\b\b" << (i + 1) * 100 / start << "%";
+    }
+    for (int j = start; j < finish; j++)
+    {
+        
+        fin >> str;
+        while (str[0] != '0'&& str[0] != '1'&& str[0] != '2'&& str[0] != '3'&& str[0] != '4'&& str[0] != '5'&& str[0] != '6'&& str[0] != '7'&& str[0] != '8'&& str[0] != '9')
+        {
+            str.erase(0, 1);
+        }
+        q = stoi(str);
         str = "bin/" + to_string(q);
         ofstream fout(str);
         cout << j << "\n";
