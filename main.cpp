@@ -21,7 +21,8 @@ int main() {
         fin.ignore(20, '\n');
         cout << "\b\b\b\b" << (i + 1) * 100 / start << "%";
     }
-    for (int j = start; j < finish; j++)
+    cout << "\n";
+    for (int j = start; j < finish+1; j++)
     {
         
         fin >> str;
