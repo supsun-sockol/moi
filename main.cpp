@@ -16,7 +16,7 @@ int main() {
     long long q;
     string str;
     unordered_map <int, bool> v;
-    for (int i = 0; i < start; i++)
+    for (int i = 1; i < start; i++)
     {
         fin.ignore(20, '\n');
         cout << "\b\b\b\b" << (i + 1) * 100 / start << "%";
