@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 int main() {
-    ifstream fin("primes1.txt");
+    ifstream fin("D:/moi/primes1.txt");
     if (!fin.is_open())
     {
         return 1;
@@ -16,7 +16,7 @@ int main() {
     long long q;
     string str;
     unordered_map <int, bool> v;
-    for (int i = 0; i < start; i++)
+    for (int i = 1; i < start; i++)
     {
         fin.ignore(20, '\n');
         cout << "\b\b\b\b" << (i + 1) * 100 / start << "%";
@@ -31,7 +31,7 @@ int main() {
             str.erase(0, 1);
         }
         q = stoi(str);
-        str = "bin/" + to_string(q);
+        str = "D:/moi/bin/" + to_string(q);
         ofstream fout(str);
         cout << j << "\n";
         for (int i = 1; i < q; i++) {
