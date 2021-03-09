@@ -13,9 +13,9 @@ int main() {
     int finish;
     cin >> start;
     cin >> finish;
-    long long q;
+    unsigned long long q;
     string str;
-    unordered_map <int, bool> v;
+    unordered_map <unsigned int, bool> v;
     for (int i = 1; i < start; i++)
     {
         fin.ignore(20, '\n');
@@ -34,12 +34,12 @@ int main() {
         str = "D:/moi/bin/" + to_string(q);
         ofstream fout(str);
         cout << j << "\n";
-        for (int i = 1; i < q; i++) {
+        for (unsigned long long i = 1; i < q; i++) {
             v[(i * i) % q] = 1;
             cout << "\b\b\b\b" << (i + 1) * 100 / q << "%";
         }
         cout << "\n";
-        for (int i = 1; i < q; i++) {
+        for (unsigned int i = 1; i < q; i++) {
             if (v[i])
             {
                 fout << 1;
